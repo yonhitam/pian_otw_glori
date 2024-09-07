@@ -68,7 +68,14 @@ h1 {
 .image-gallery img {
     width: 100%;
     max-width: 400px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-gallery p {
+    margin: 5px 0;
+    color: #ffffff; /* Teks putih untuk deskripsi nama */
+    font-size: 1.2em;
+    font-weight: 500;
 }
