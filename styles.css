@@ -1,0 +1,74 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #202225; /* Abu-abu gelap kehitaman */
+    color: #d1d5db; /* Teks abu-abu terang */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #2f3136; /* Latar belakang panel abu-abu gelap */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+h1 {
+    color: #ffffff; /* Teks putih */
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.cool-btn {
+    background-color: #5865f2; /* Biru Pterodactyl */
+    border: none;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cool-btn:hover {
+    background-color: #4752c4; /* Biru yang sedikit lebih gelap saat hover */
+}
+
+/* Styling gambar rumah usang */
+.old-house-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    margin: 20px 0;
+}
+
+/* Styling untuk galeri gambar */
+.image-gallery {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
