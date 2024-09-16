@@ -9,8 +9,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #202225; /* Abu-abu gelap kehitaman */
-            color: #d1d5db; /* Teks abu-abu terang */
+            background-color: #202225;
+            color: #d1d5db;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -22,20 +22,20 @@
             text-align: center;
             padding: 20px;
             border-radius: 10px;
-            background-color: #2f3136; /* Latar belakang panel abu-abu gelap */
+            background-color: #2f3136;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             margin-top: 20px;
         }
 
         h1 {
-            color: #ffffff; /* Teks putih */
+            color: #ffffff;
             font-size: 2.5em;
             font-weight: 600;
             margin-bottom: 20px;
         }
 
         .cool-btn {
-            background-color: #5865f2; /* Biru Pterodactyl */
+            background-color: #5865f2;
             border: none;
             color: #ffffff;
             padding: 15px 30px;
@@ -50,44 +50,54 @@
         }
 
         .cool-btn:hover {
-            background-color: #4752c4; /* Biru yang sedikit lebih gelap saat hover */
+            background-color: #4752c4;
         }
 
-        /* Styling slider gambar */
-        .slider {
+        .slider-container {
             position: relative;
-            width: 100%;
             max-width: 600px;
             margin: 20px auto;
             overflow: hidden;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .slides {
             display: flex;
             transition: transform 0.5s ease-in-out;
+            width: 100%;
         }
 
-        .slides img {
+        .slide {
+            min-width: 100%;
+            transition: 0.5s;
+            text-align: center;
+        }
+
+        .slide img {
             width: 100%;
+            max-width: 600px;
             border-radius: 10px;
         }
 
-        /* Tombol kontrol slider */
+        .slide p {
+            color: #ffffff;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
         .prev, .next {
             cursor: pointer;
             position: absolute;
             top: 50%;
             width: auto;
-            padding: 10px;
+            margin-top: -22px;
+            padding: 16px;
             color: white;
             font-weight: bold;
             font-size: 18px;
+            transition: 0.6s ease;
             border-radius: 0 3px 3px 0;
             user-select: none;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .next {
@@ -95,47 +105,49 @@
             border-radius: 3px 0 0 3px;
         }
 
-        .prev {
-            left: 0;
-        }
-
-        .title {
-            color: white;
-            font-size: 15px;
-            font-weight: bold;  
-            z-index: 2;
-            padding: 7px 20px;
-            background: #5865f2;
-            border-radius: 15px;
-            backdrop-filter: blur(15px);
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>WEB WONG IRENG JAWA</h1>
-
-        <div class="slider">
-            <div class="slides">
-                <!-- Gambar slider -->
-                <img src="https://pomf2.lain.la/f/cj84bve.jpg" alt="Rumah Usang">
-                <img src="https://pomf2.lain.la/f/a9ijtjl1.jpg" alt="Ketua Geng">
-                <img src="https://pomf2.lain.la/f/wbaoudtk.jpg" alt="Wakil Ketua">
-                <img src="https://pomf2.lain.la/f/5vwjuuck.jpg" alt="Tangan Kanan">
-                <img src="https://pomf2.lain.la/f/7196wslk.jpg" alt="Tangan Kiri">
-                <img src="https://pomf2.lain.la/f/6j37mf5.jpg" alt="Anggota Geng">
-            </div>
-            <!-- Tombol Previous dan Next -->
-            <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
-            <a class="next" onclick="moveSlides(1)">&#10095;</a>
-        </div>
-        
+        <img src="https://pomf2.lain.la/f/cj84bve.jpg" alt="Rumah Usang" class="old-house-img">
+        <br>
         <a href="https://wa.me/6282131902807?text=mabar+ml+woi" target="_blank">
             <button class="cool-btn">CHET WA</button>
         </a>
         <a href="https://www.tiktok.com/@wongirengmambukecing344?_t=8pW8cfcrYEG&_r=1" target="_blank">
             <button class="cool-btn">FOLOW TIKTOKKU</button>
         </a>
+    </div>
+
+    <div class="slider-container">
+        <div class="slides">
+            <div class="slide">
+                <img src="https://pomf2.lain.la/f/a9ijtjl1.jpg" alt="Image 1">
+                <p>Ketua Geng</p>
+            </div>
+            <div class="slide">
+                <img src="https://pomf2.lain.la/f/wbaoudtk.jpg" alt="Image 2">
+                <p>Wakil Ketua</p>
+            </div>
+            <div class="slide">
+                <img src="https://pomf2.lain.la/f/5vwjuuck.jpg" alt="Image 3">
+                <p>Tangan Kanan</p>
+            </div>
+            <div class="slide">
+                <img src="https://pomf2.lain.la/f/7196wslk.jpg" alt="Image 4">
+                <p>Tangan Kiri</p>
+            </div>
+            <div class="slide">
+                <img src="https://pomf2.lain.la/f/6j37mf5.jpg" alt="Image 5">
+                <p>Anggota Geng</p>
+            </div>
+        </div>
+        <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlides(1)">&#10095;</a>
     </div>
 
     <script>
@@ -155,7 +167,6 @@
             slides.style.transform = `translateX(${-slideIndex * 100}%)`;
         }
 
-        // Slide pertama tampil saat halaman pertama kali dimuat
         moveSlides(0);
     </script>
 </body>
